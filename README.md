@@ -25,31 +25,10 @@
 * Calling Add with a negative number will throw an exception "negatives not allowed" - and the negative that was passed.
 	* if there are multiple negatives, show all of them in the exception message
 
-
-### The Bowling Game Kata ([via Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata))
-	- Create a new project or start in the existing project by adding Game.cs and TestGame.cs
-	- Create two public methods methods [refer to the presentation file]
-	- Create Test Methods for the above Methods
-	- This is called a 'RED' Test as it is going to fail.
-	- Rectified both test and class methods
-	- Write new test
-	- This is called a 'Green' Test as it is going to pass.
-	- Rectified TestMethods to meet total 20 frames hit.
-	- Rectified test to accept multiple frame and pins
-	- Test 3 is a 'Red' test
-	- Test 4 and 5 are 'Green'
-	- All test passed
-	- Still there is scope of refactoring
-
 ### The FizzBuzz Kata
 	- Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz"
 	  instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both
 	  three and five print "FizzBuzz".
-
-### Including new implementation to The FizzBuzz Kata
-	- Added a different implementation for FizzBuzz using Reactive extensions.
-	- The changes are described at: http://blog.drorhelper.com/2015/02/fizzbuzz-tdd-kata-using-reactive.html
-	- Pull Request by: https://github.com/dhelper (manually merged by @garora)
 	  
 
 #### Steps:
@@ -101,8 +80,6 @@
 	- Create a new method to check Prime/Composite of a single supplied method.
 
 -------------------
-
-### Kata - coming next [http://www.cyber-dojo.com/]
 
 #### Calc Stats:
 
@@ -468,36 +445,4 @@
 		1,1,2,2,2 scores 8 (1+1+2+2+2)
 		2,2,3,3,4 scores 0
 		4,4,4,4,4 scores 0
----------------------------------------------------------------------
 
-### Many more from [PragProg.com](http://codekata.pragprog.com/2007/01/code_kata_backg.html#more)
-
-----------------------------------------------------------------------
-
-### The Word Wrap Kata (via [CodingDojo](http://codingdojo.org/cgi-bin/wiki.pl?KataWordWrap))
-	Create a function which breaks words on specified space with new line. Its nothing but merely similar to word-processor.
-
-#### Steps:
-		1. Create a public class named WordWrap
-		2. Create a method 'wrap' it can be a static method
-		3. Create a function which count the number of spliter words of non-space
-		4. check for if words already having newline ['\n'] characters - ignore in counts
-		5. Check for multiple lines
-		6. Remove blank spaces if any in new line eg. Actual - "this is a test" WrappedText = "this\n is a t\nest"
-
---------------------------------------------------------------------------------------------------------------------------
-### Natural Order String Sorting
---------------------------------------------------------------------------------------------------------------------------
-### There is no built-in feature available in .Net to provide us Natural String Order Soring.
-
-#### What is Natural Order String Sorting?
-    Almost all framework provided ASCII order Sorting so, in case of string list : 1,2,3...,1A,2S the result would be as per ASCII order
-	But in Natural Order String this should be : 1,1A,2,2S,3... etc.
-References
-====
-* TDD-Kata Practices: http://tddkatas.codeplex.com/
-* The Prime Factor Kata: http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata
-* The Bowling Game Kata: http://butunclebob.com/ArticleS.UncleBob.TheBowlingGameKata
-* More: http://codekata.pragprog.com/2007/01/code_kata_backg.html#more
-* Word Wrap Kata: http://codingdojo.org/cgi-bin/wiki.pl?KataWordWrap
-* String Calculator: http://osherove.com/tdd-kata-1/
