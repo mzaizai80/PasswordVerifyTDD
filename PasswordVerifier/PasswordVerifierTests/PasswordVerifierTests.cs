@@ -7,11 +7,14 @@ namespace PasswordVerifierTests
     public class PasswordVerifierTests
     {
         [TestMethod]
-        public void TestPasswordShouldBeLargerThan8chars()
+        public void Test()
         {
-            var passwordVerifier = new PasswordVerifierEngine();
+            // Arrange
 
-            var passwordVerified = passwordVerifier.Verify("qwer1234");
+            // Act
+
+            // Assert
+
         }
     }
 }
