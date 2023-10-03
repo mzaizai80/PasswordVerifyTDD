@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace PasswordVerifier
 {
@@ -7,21 +6,24 @@ namespace PasswordVerifier
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Please enter a Password");
-            var userInputPassword = Console.ReadLine();
             var passwordVerifier = new PasswordVerifierEngine();
 
-            try
+            while (true)
             {
-                passwordVerifier.Verify(userInputPassword);
-                Console.WriteLine("Password accepted");
-            }
-            catch (ArgumentException ex)
-            {
-                Console.WriteLine("Password rejected: " + ex.Message);
+                Console.WriteLine("Please enter a Password");
+                var userInputPassword = Console.ReadLine();
+
+                try
+                {
+                    passwordVerifier.Verify(userInputPassword);
+                    Console.WriteLine("Password accepted");
+                    break; // Exit the loop when a valid password is provided
+                }
+                catch (ArgumentException ex)
+                {
+                    Console.WriteLine("Password rejected: " + ex.Message);
+                }
             }
         }
     }
 }
-
-

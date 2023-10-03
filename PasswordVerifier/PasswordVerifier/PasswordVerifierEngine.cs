@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 
 namespace PasswordVerifier
 {
@@ -15,19 +16,25 @@ namespace PasswordVerifier
             bool hasLowerCase = password.Any(char.IsLower);
             bool hasNumber = password.Any(char.IsDigit);
 
-            int conditionsMet = Convert.ToInt32(isLongEnough) +
-                                Convert.ToInt32(hasUpperCase) +
-                                Convert.ToInt32(hasLowerCase) +
-                                Convert.ToInt32(hasNumber);
+            if (isLongEnough && hasUpperCase && hasLowerCase && hasNumber)
+            {
+                return true;
+            }
 
-            if (conditionsMet < 3)
-                throw new ArgumentException("Password should meet at least three conditions.");
+            StringBuilder message = new StringBuilder("Password should meet the following conditions: ");
 
-            if (!hasNumber || !hasLowerCase || !hasUpperCase)
-                throw new ArgumentException("Password should have at least one uppercase letter, one lowercase letter, and one number.");
+            if (!isLongEnough)
+                message.Append("length > 8, ");
+            if (!hasUpperCase)
+                message.Append("at least one uppercase letter, ");
+            if (!hasLowerCase)
+                message.Append("at least one lowercase letter, ");
+            if (!hasNumber)
+                message.Append("at least one number, ");
 
-            return true;
+            throw new ArgumentException(message.ToString().TrimEnd(',', ' '));
         }
+
     }
 
 }
